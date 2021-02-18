@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">华鼎云报货端</string>
+    <string name="one" translatable="false">分类</string>
+    <string name="two" translatable="false">购物车</string>
+    <string name="three" translatable="false">我的</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="netErrorTipText" translatable="false">网络异常，请点击刷新</string>
+</resources>

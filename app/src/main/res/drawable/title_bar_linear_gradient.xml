@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--titlebar线性垂直渐变背景-->
+<!--
+        android:endColor="#1A88F5"
+-->
+
+    <gradient
+        android:angle="270"
+        android:endColor="#084D8E "
+        android:startColor="#4A64C5" />
+
+</shape>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/shape_white_5dp"
+            android:layout_marginLeft="@dimen/dp_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发现新版本"
+                android:textSize="21sp"
+                android:textColor="#007fff"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="100dp"/>
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="锅圈食汇V2.0"
+                android:textSize="16sp"
+                android:textColor="#329B39"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_6"
+                android:visibility="gone"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:lineSpacingExtra="@dimen/dp_5"
+                    android:minHeight="50dp"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColor="@color/black666"
+                    android:textSize="@dimen/sp_12" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/dp_36"
+                android:background="@drawable/item_kuang_20dp_green_bg"
+                android:gravity="center"
+                android:text="立即升级"
+                android:textColor="#007fff"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_36"/>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/upapp_bg"/>
+
+    </RelativeLayout>
+
+
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/upapp_close" />
+
+
+</LinearLayout>

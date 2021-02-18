@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.huadingcloudpackage.www.widget.ShapeTextView
+        android:id="@+id/item_dialog_reason_rv_grid_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:shapeType="rectangle"
+        app:cornerRadius="5dp"
+        app:NormalBgColor="@color/colorAccent"
+        android:text="少发漏发"
+        app:NormalTextColor="@color/white"
+        android:gravity="center"/>
+
+</LinearLayout>

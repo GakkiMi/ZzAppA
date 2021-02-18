@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.huadingcloudpackage.www">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 读取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 访问手机当前状态, 需要device id用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于 log 日志 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Android Q新增权限，允许应用在后台发起定位，如应用target为Q，请添加此权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".activity.order.orderdeclare.DecOneMoreOrderActivity"></activity>
+        <activity android:name=".activity.order.orderdiff.DiffOrderDetailActivity" />
+        <activity android:name=".activity.order.orderdeclare.DeclareOrderDetailActivity" /> <!-- app更新过程中突发事件相应的接收器 -->
+        <receiver android:name=".reciever.AppUpdateReceiver" />
+
+        <activity android:name=".activity.gouwuche.GouWuCheActivity" />
+        <activity
+            android:name=".activity.login.WelcomeActivity"
+            android:configChanges="orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden|stateUnchanged"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.order.ordercommit.OrderCommitActivity" /> <!-- 订单结算页面 -->
+        <activity android:name=".activity.order.ordercommit.PayOderActivity" /> <!-- 支付界面 -->
+        <activity android:name=".activity.order.ordercommit.PayResultActivity" /> <!-- 支付结果界面 -->
+        <activity android:name=".activity.OtherActivity" />
+        <activity android:name=".activity.mine.WelcomeAboutActivity" />
+        <activity
+            android:name=".activity.login.GuideActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.search.SearchActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.mine.AboutUseActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.mine.MeSetActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.mine.MineAccountActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 修改手机密码 -->
+        <activity
+            android:name=".activity.set.UpdatePhonePswActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 修改支付密码 -->
+        <activity
+            android:name=".activity.set.SetPasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 更换手机号 -->
+        <activity
+            android:name=".activity.set.UpdatePhoneNumActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 我的地址列表 -->
+        <activity
+            android:name=".activity.addresslist.AddressListActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 新增收货地址 -->
+        <activity
+            android:name=".activity.newaddress.NewAddressActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 我的收藏 -->
+        <activity
+            android:name=".activity.collection.MyCollectionActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 我的订单 -->
+        <activity
+            android:name=".activity.order.orderdeclare.DeclareOrderListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 我的订单详情 待付款 -->
+        <activity
+            android:name=".activity.order.orderdiff.DiffOrderListActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.confirmgoods.ConfirmgoodsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" /> <!-- 确定收货 -->
+        <activity
+            android:name=".activity.logisticsdetail.LogisticsDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 物流详情 -->
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.login.ForGetPwdActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.login.ForGetPassActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.login.SetNewPwdActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.huadingcloudpackage.www.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="FHNBZ-6YHL6-4ZMSK-EYLJ4-FO32J-AWFC2" /> <!-- 商品详情 -->
+        <activity
+            android:name=".activity.goods.GoodsDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>

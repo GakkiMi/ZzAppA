@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+
+    <ImageView
+        android:id="@+id/goods_iv_check_status"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/goods_iv_check_status">
+
+        <ImageView
+            android:id="@+id/goods_iv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_loading_fail" />
+
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="已售罄"
+            android:background="#64000000"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/goods_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="P2包P2包装2包装盒装盒"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/goods_tv_guige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="118g套*40袋/箱"
+            android:textColor="#ff999999"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FD6D14"
+                            android:text="¥"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_new_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPriceColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_new_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999999"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/cart_item_change_number_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/goods_num_iv_jian"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="20dp"
+                            android:focusable="true"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/cart_jian"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="5"
+                            android:singleLine="true"
+                            android:textColor="@color/black000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/goods_num_iv_jia"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="20dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/cart_jia"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_second_spce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FD6D14"
+                            android:text="¥"
+                            android:textSize="10sp" />
+                        <TextView
+                            android:id="@+id/tv_new_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPriceColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_new_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999999"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/cart_item_change_number_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/iv_jian"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="20dp"
+                            android:focusable="true"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/cart_jian"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_num"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="5"
+                            android:singleLine="true"
+                            android:textColor="@color/black000"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_jia"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="20dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/cart_jia"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

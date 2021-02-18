@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="#f2f2f2"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_3"
+            android:scaleType="centerInside"
+            android:src="@mipmap/return_black_left"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_36"
+            android:paddingRight="@dimen/dp_36"
+            android:singleLine="true"
+            android:textColor="@color/black000"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_icon_menu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toLeftOf="@id/tv_right">
+
+            <ImageView
+                android:id="@+id/iv_gouwuche"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/gouwuche" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shapebg_mine_goodsnum"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="6sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text="管理"
+            android:textColor="#084D8E"
+            android:textSize="@dimen/font_normal" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_collected"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_collection_select"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/iv_select"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/btn_check"
+            android:button="@null" />
+
+        <TextView
+            android:id="@+id/tv_collected_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_weight="1"
+            android:text="全选"
+            android:textColor="#ff999999"
+            android:textSize="14sp" />
+
+        <com.huadingcloudpackage.www.widget.ShapeTextView
+            android:id="@+id/tv_delete"
+            android:layout_width="96dp"
+            android:layout_height="33dp"
+            android:background="@drawable/shape_25dp_blue_select_bg"
+            android:gravity="center"
+            android:paddingLeft="23dp"
+            android:paddingTop="5dp"
+            android:paddingRight="23dp"
+            android:paddingBottom="5dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:NormalBgColor="@color/theme_color"
+            app:PressBgColor="@color/color_005CFF"
+            app:cornerRadius="20dp"
+            app:shapeType="rectangle" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.order.ordercommit.PayResultActivity">
+
+
+    <ImageView
+        android:id="@+id/pay_result_iv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/img_pay_result_success" />
+
+    <TextView
+        android:id="@+id/pay_result_tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_result_iv_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pay_result_tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_result_tv_money"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#9A9A9A"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <com.huadingcloudpackage.www.widget.ShapeTextView
+        android:id="@+id/pay_result_stv_left"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/dp_36"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_toLeftOf="@+id/view"
+        android:gravity="center"
+        android:text="查看订单"
+        app:NormalTextColor="@color/theme_color"
+        app:PressTextColor="@color/colorThemeTransparnet"
+        app:StrokeNormalColor="@color/theme_color"
+        app:StrokePressColor="@color/colorThemeTransparnet"
+        app:StrokeWidth="@dimen/dp_1"
+        app:cornerRadius="@dimen/dp_5"
+        app:shapeType="rectangle" />
+
+    <com.huadingcloudpackage.www.widget.ShapeTextView
+        android:id="@+id/pay_result_stv_right"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/dp_36"
+        android:layout_alignTop="@id/pay_result_stv_left"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_toRightOf="@+id/view"
+        android:gravity="center"
+        android:text="返回首页"
+        app:NormalBgColor="@color/theme_color"
+        app:NormalTextColor="@color/white"
+        app:PressBgColor="@color/colorThemeTransparnet"
+        app:StrokeWidth="@dimen/dp_1"
+        app:cornerRadius="@dimen/dp_5"
+        app:shapeType="rectangle" />
+
+
+</RelativeLayout>

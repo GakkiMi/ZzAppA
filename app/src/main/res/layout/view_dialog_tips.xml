@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/view_dialog_tips_iv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_tips_dialog_bg" />
+
+    <TextView
+        android:id="@+id/view_dialog_tips_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/view_dialog_tips_iv_bg"
+        android:layout_alignRight="@+id/view_dialog_tips_iv_bg"
+        android:layout_alignBottom="@id/view_dialog_tips_iv_bg"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/dp_30"
+        android:layout_marginTop="150dp"
+        android:text="安静的反安静的反垃放"
+        android:gravity="center"
+        android:textColor="@color/black333"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/view_dialog_tips_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dialog_tips_iv_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/img_tips_dialog_close"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+
+</RelativeLayout>

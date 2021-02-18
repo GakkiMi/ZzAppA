@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><!---->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_order_or_detial_white_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="15dp">
+
+    <LinearLayout
+        android:id="@+id/item_declare_order_rv_group_ll_normal_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/relative_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_order_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black333"
+                android:textSize="14sp"
+                tools:text="订单编号：" />
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_order_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                tools:text="已完成" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_declare_order_rv_group_rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <include
+            layout="@layout/item_order_list_footer_expand_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_goods_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black333"
+                android:textSize="13sp"
+                tools:text="共1件商品" />
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_shipping_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black333"
+                android:textSize="13sp"
+                tools:text="运费：¥10" />
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black333"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
+                tools:text="实付款：" />
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="13sp"
+                tools:text="¥132.00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_click_left"
+                style="@style/order_list_bottom_click_tv_commen_style" />
+
+            <TextView
+                android:id="@+id/item_declare_order_rv_group_tv_click_right"
+                style="@style/order_list_bottom_click_tv_commen_style" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_declare_order_rv_group_rl_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="异常订单" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+

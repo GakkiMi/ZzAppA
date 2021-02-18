@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="93dp"
+    android:layout_height="93dp">
+
+    <com.huadingcloudpackage.www.widget.RoundRLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7.5dp"
+        android:layout_marginTop="7.5dp"
+        app:roundLayoutRadius="3dp"
+        app:roundLayoutStrokeWidth="1px">
+
+        <com.huadingcloudpackage.www.widget.SquareImageview
+            android:id="@+id/item_image_upload_iv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_img_add" />
+
+
+    </com.huadingcloudpackage.www.widget.RoundRLayout>
+
+
+    <ImageView
+        android:id="@+id/item_image_upload_iv_delete"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="18dp"
+        android:paddingBottom="17.5dp"
+        android:src="@mipmap/close" />
+
+
+</RelativeLayout>

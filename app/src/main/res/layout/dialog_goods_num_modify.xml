@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_round_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+            android:id="@+id/goods_num_iv_jian"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="true"
+            android:padding="@dimen/dp_2"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_jian" />-->
+
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/goods_num_stv_jian"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:drawableStart="@mipmap/icon_jian"
+                android:gravity="center"
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:PressBgColor="@color/colorJiaJianPressBg"
+                app:bottomLeftCornerRadius="@dimen/dp_3"
+                app:shapeType="rectangle"
+                app:topLeftCornerRadius="@dimen/dp_3" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/goods_num_et_edit"
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="53dp"
+                android:background="@color/colorJiaJianNormalBg"
+                android:gravity="center"
+                android:maxLength="10"
+                android:singleLine="true"
+                tools:text="12345678.96"
+                android:textColor="@color/black000"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/goods_num_stv_jia"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:drawableStart="@mipmap/icon_jia"
+                android:gravity="center"
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:PressBgColor="@color/colorJiaJianPressBg"
+                app:bottomRightCornerRadius="@dimen/dp_3"
+                app:shapeType="rectangle"
+                app:topRightCornerRadius="@dimen/dp_3" />
+
+            <!--
+                        <ImageView
+                            android:id="@+id/goods_num_iv_jia"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:clickable="true"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/icon_jia" />-->
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_dialog_right_white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/linerlayout_water_selector"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#ff007fff"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE" />
+
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/linerlayout_water_selector"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#ff007fff"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

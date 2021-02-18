@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#084D8E</color>
+    <color name="theme_color">#084D8E</color>
+    <color name="color_005CFF">#005CFF</color>
+    <color name="color_5B7997">#5B7997</color>
+    <color name="color_C1C9D1">#C1C9D1</color>
+    <color name="black000">#000000</color>
+    <color name="black666">#666666</color>
+    <color name="black333">#333333</color>
+    <color name="black777">#777777</color>
+    <color name="black999">#999999</color>
+    <color name="line_color">#EEEEEE</color>
+    <color name="app_bg">#f8f8f8</color>
+    <color name="red">#FF5722</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="text_Grey">#c1c1c2</color>
+
+    <color name="cp_gray">#8c8c8c</color>
+    <color name="cp_gray_deep">#5c5c5c</color>
+    <color name="gray_view">#ffededed</color>
+
+    <color name="colorDivider">#EEEEEE</color><!--分割线颜色-->
+    <color name="colorGrayText">#999999</color><!--分割线颜色-->
+    <color name="colorPriceColor">#FD6D14</color><!--价格颜色-->
+    <color name="colorTransparent">#00000000</color><!--透明颜色-->
+
+    <color name="colorDarkRed">#BB1E1E</color><!--红色-->
+    <color name="colorRed">#ED1010</color><!--红色-->
+    <color name="colorBlackHalf">#80000000</color><!--半透明黑色-->
+    <color name="colorPageBg">#f2f2f2</color><!--页面背景色-->
+    <color name="colorPaySureNoOk">#80084D8E</color><!--支付确定待完成颜色-->
+    <color name="colorThemeTransparnet">#CC084D8E</color><!--主题颜色半透明-->
+    <color name="colorJiaJianNormalBg">#EDEDED</color><!--加减按钮正常颜色-->
+    <color name="colorJiaJianPressBg">#80EDEDED</color><!--加减按钮按压颜色-->
+
+</resources>

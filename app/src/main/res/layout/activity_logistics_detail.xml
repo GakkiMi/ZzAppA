@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/logistics_detail_title_bar"
+        layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:id="@+id/logistics_detail_ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/logistics_detail_title_bar"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:background="@drawable/shape_white_5dp"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logistics_detail_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/car" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/logistics_detail_tv_driver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                tools:text="司机姓名：张三" />
+
+            <TextView
+                android:id="@+id/logistics_detail_tv_driver_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                tools:text="手机号码：13348758934" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logistics_detail_ll_top"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/logistics_detail_rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_5dp"
+            android:padding="15dp"
+            android:visibility="visible">
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/logistics_detail_iv_logo"
+                android:layout_alignTop="@+id/logistics_detail_iv_logo"
+                android:layout_alignBottom="@+id/logistics_detail_tv_receiver_address"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorDivider"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/logistics_detail_iv_logo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="7dp"
+                android:background="@color/white"
+                android:src="@mipmap/wuliu_shou_addr"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/logistics_detail_tv_receiver_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/logistics_detail_iv_logo"
+                android:paddingVertical="@dimen/dp_10"
+                android:textColor="@color/black000"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="河南省郑州市中原河南省郑州市中原区瀚海新城东风路菜鸟区瀚海新城东风路菜鸟" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/logistics_detail_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logistics_detail_tv_receiver_address"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/logistics_detail_tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无物流信息"
+        android:textColor="@color/colorGrayText"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

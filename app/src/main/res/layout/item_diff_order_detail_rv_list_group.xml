@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_diff_order_detail_rv_list_group_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/item_diff_order_detail_rv_list_group_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/dingdan_dianpu"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black000"
+        android:textSize="13sp"
+        tools:text="仓库1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_diff_order_detail_rv_list_group_rv_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/item_diff_order_detail_rv_list_tv_diff_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            tools:text="应付总金额" />
+
+        <TextView
+            android:id="@+id/item_diff_order_detail_rv_list_tv_diff_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPriceColor"
+            android:textSize="13sp"
+            tools:text="¥ 132.00" />
+    </RelativeLayout>
+
+
+</LinearLayout>

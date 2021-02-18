@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_parent"
+    android:background="@drawable/item_select_bg"
+    android:layout_height="40dp">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="3dp"
+        android:layout_height="15dp"
+        android:background="@drawable/shape_line"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10" />
+
+
+    <TextView
+        android:id="@+id/item_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设施设备"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_centerInParent="true"
+        android:textColor="@drawable/selector_txt_color"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+
+    <com.huadingcloudpackage.www.widget.RoundRLayout
+        android:id="@+id/item_diff_order_detail_rv_list_round_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        app:roundLayoutRadius="5dp"
+        app:roundLayoutStrokeWidth="1px">
+
+        <ImageView
+            android:id="@+id/item_diff_order_detail_rv_list_iv_show"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_loading_fail" />
+
+        <ImageView
+            android:id="@+id/item_diff_order_detail_rv_list_iv_diff_pay_type"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            tools:src="@drawable/img_shouhou_refund" />
+
+
+    </com.huadingcloudpackage.www.widget.RoundRLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_diff_order_detail_rv_list_round_layout"
+        android:layout_alignBottom="@+id/item_diff_order_detail_rv_list_round_layout"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/item_diff_order_detail_rv_list_round_layout"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/item_diff_order_detail_rv_list_tv_goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            tools:text="精选丸子精选丸子精精选丸子选选精选丸子精精选丸子选选精精选丸子选选" />
+
+
+        <TextView
+            android:id="@+id/item_diff_order_detail_rv_list_tv_goods_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_diff_order_detail_rv_list_tv_goods_name"
+            android:textColor="@color/colorGrayText"
+            android:textSize="12sp"
+            tools:text="3.5kg*10袋/件" />
+
+        <include
+            layout="@layout/view_of_goods_multiple_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/item_diff_order_detail_rv_list_tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="¥33.00" />
+
+
+            <TextView
+                android:id="@+id/item_diff_order_detail_rv_list_tv_goods_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorGrayText"
+                android:textSize="15sp"
+                tools:text="x4" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

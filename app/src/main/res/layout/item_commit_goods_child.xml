@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_15"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/item_commit_goods_child_iv_show"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_loading_fail" />
+
+    <TextView
+        android:id="@+id/item_commit_goods_child_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/item_commit_goods_child_iv_show"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:text="拉萨看得见伐啦看见分厘卡机了啊多发点"
+        android:textColor="@color/black333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/item_commit_goods_child_tv_guige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_commit_goods_child_tv_name"
+        android:layout_alignLeft="@+id/item_commit_goods_child_tv_name"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:text="件"
+        android:textColor="@color/colorGrayText"
+        android:textSize="12sp" />
+
+
+    <include
+        layout="@layout/view_of_goods_multiple_spec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_commit_goods_child_iv_show"
+        android:layout_alignLeft="@+id/item_commit_goods_child_tv_name"
+       />
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_commit_goods_child_iv_show"
+        android:layout_alignLeft="@+id/item_commit_goods_child_tv_name"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/order_unit_big_rl"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/order_unit_big_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥33.00"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/order_unit_big_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="x4"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_unit_small_rl"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/order_unit_small_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥33.00"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/order_unit_small_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="x4"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+-->
+
+</RelativeLayout>

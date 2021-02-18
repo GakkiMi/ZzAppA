@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.gouwuche.GouWuCheActivity">
+
+    <!--<fragment
+        android:id="@+id/gouwuche_fragment"
+        android:name="com.huadingcloudpackage.www.activityfragment.BGouWuCarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
+
+    <FrameLayout
+        android:id="@+id/gou_wu_che_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

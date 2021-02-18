@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_order_item_round_corner_only_bottom_bg"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@color/colorDivider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运费"
+                android:textColor="@color/black333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black333"
+                android:textSize="12sp"
+                tools:text="¥10.00" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单备注"
+                android:textColor="@color/black333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_order_remark"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:textColor="@color/black333"
+                android:textSize="12sp"
+                tools:text="看大家法律框架flak角度看" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_amount_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应付款"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="13sp"
+                tools:text="¥ 132.00" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/shape_order_or_detial_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_order_no_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black333"
+                android:textSize="13dp"
+                tools:text="订单编号：" />
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/order_detail_common_tv_order_no_type"
+                android:textColor="@color/black333"
+                android:textSize="13dp"
+                tools:text="65234879376328493" />
+
+
+            <TextView
+                android:id="@+id/order_detail_common_tv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="复制"
+                android:textColor="@color/colorPriceColor"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/order_detail_common_tv_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            android:visibility="visible"
+            tools:text="下单时间：2020-07-09  08:22:23" />
+
+        <TextView
+            android:id="@+id/order_detail_common_tv_payment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            android:visibility="visible"
+            tools:text="付款时间：2020-07-09  08:22:23" />
+
+
+        <TextView
+            android:id="@+id/order_detail_common_tv_delivery_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            android:visibility="visible"
+            tools:text="发货时间：2020-07-09  08:22:23" />
+
+
+        <TextView
+            android:id="@+id/order_detail_common_tv_transaction_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            android:visibility="visible"
+            tools:text="成交时间：2020-07-09  08:22:23" />
+
+
+        <TextView
+            android:id="@+id/order_detail_common_tv_delivery_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            android:visibility="visible"
+            tools:text="配送方式：快递物流" />
+
+        <!--  <TextView
+              android:id="@+id/order_detail_common_tv_order_remark"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginTop="10dp"
+              android:textColor="#ff333333"
+              android:textSize="13sp"
+              android:visibility="visible"
+              tools:text="订单备注：快递物流" />-->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:layout_marginTop="10dp"
+            android:background="#ffededed" />
+
+
+        <com.huadingcloudpackage.www.widget.DrawCenterTextView
+            android:id="@+id/order_detail_common_stv_call_fuke"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@mipmap/kefu_order"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="联系客服"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

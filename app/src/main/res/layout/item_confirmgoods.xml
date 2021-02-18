@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.huadingcloudpackage.www.widget.RoundRLayout
+            android:id="@+id/item_confirmgoods_round_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            app:roundLayoutRadius="5dp"
+            app:roundLayoutStrokeWidth="1px">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_loading_fail" />
+
+        </com.huadingcloudpackage.www.widget.RoundRLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_confirmgoods_round_layout"
+            android:layout_alignBottom="@+id/item_confirmgoods_round_layout"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/item_confirmgoods_round_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_confirmgoods_tv_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="精选丸子精选" />
+
+            <TextView
+                android:id="@+id/item_confirmgoods_tv_spec_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_confirmgoods_tv_goods_name"
+                android:textColor="@color/colorGrayText"
+                android:textSize="12sp"
+                tools:text="精选丸子精选" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/item_confirmgoods_tv_goods_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="12sp"
+                    tools:text="件" />
+
+                <TextView
+                    android:id="@+id/item_confirmgoods_tv_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorPriceColor"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    tools:text="¥33.00" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/item_confirmgoods_unit_big_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/item_confirmgoods_tv_big_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        tools:text="件" />
+
+                    <TextView
+                        android:id="@+id/item_confirmgoods_tv_big_unit_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorPriceColor"
+                        android:textSize="15sp"
+                        tools:text="¥33.00" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_confirmgoods_unit_small_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/item_confirmgoods_tv_small_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        tools:text="件" />
+
+                    <TextView
+                        android:id="@+id/item_confirmgoods_tv_small_unit_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorPriceColor"
+                        android:textSize="15sp"
+                        tools:text="¥33.00" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应取数量"
+            android:textColor="@color/black333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/item_confirmgoods_tv_yingqu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            tools:text="12 夫" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:descendantFocusability="beforeDescendants"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实取数量"
+            android:textColor="@color/black333"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/item_confirmgoods_tv_big_unit_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:textColor="#ff084d8e"
+                android:textSize="13sp"
+                app:PressBgColor="@color/colorJiaJianPressBg"
+
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:cornerRadius="2dp"
+                tools:text="11" />
+
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/item_confirmgoods_tv_big_unit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="9dp"
+                android:textColor="@color/black000"
+                android:layout_marginLeft="1dp"
+                android:textSize="13sp"
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:cornerRadius="2dp"
+                tools:text="包" />
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/item_confirmgoods_tv_small_unit_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:textColor="#ff084d8e"
+                android:layout_marginLeft="1dp"
+                android:textSize="13sp"
+                app:PressBgColor="@color/colorJiaJianPressBg"
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:cornerRadius="2dp"
+                tools:text="11" />
+
+
+            <com.huadingcloudpackage.www.widget.ShapeTextView
+                android:id="@+id/item_confirmgoods_tv_small_unit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black000"
+                android:paddingHorizontal="9dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:textSize="13sp"
+                app:NormalBgColor="@color/colorJiaJianNormalBg"
+                app:cornerRadius="2dp"
+                tools:text="包" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_confirm_goods_rl_diff_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/item_confirm_goods_tv_diff_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="应付金额："
+            android:textColor="@color/black333"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_confirm_goods_tv_diff_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="2398"
+            android:textColor="@color/colorPriceColor"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
